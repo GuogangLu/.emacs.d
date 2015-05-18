@@ -1,0 +1,5 @@
+(require-package 'evil)
+(evil-mode t)
+(global-evil-leader-mode t)
+(global-set-key (kbd "C-;") 'evil-normal-state)
+(provide 'init-evil)
