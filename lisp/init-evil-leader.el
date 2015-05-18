@@ -1,4 +1,5 @@
 (require-package 'evil-leader)
+(global-evil-leader-mode t)
 (evil-leader/set-leader ";")
 (evil-leader/set-key
 ;; 将org-cycle绑定在;;上

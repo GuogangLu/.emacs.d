@@ -31,7 +31,7 @@
 ;;(add-hook 'c-mode-common-hook 'my-ac-cc-mode-setup)
 
 ;; 启用clang来自动补全代码
-(require 'auto-complete-clang)
+(require-package 'auto-complete-clang)
 (add-to-list 'ac-dictionary-directories "~/emacs.d/elpa/auto-complete-20150408.1132/dict")
 (setq ac-auto-start t)
 (setq ac-quick-help-delay 0.5)
