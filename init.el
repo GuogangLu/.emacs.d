@@ -22,7 +22,7 @@
 ;; Load configs for specific features and modes
 ;;----------------------------------------------------------------------------
 
-;; (require-package 'wgrep)
+;; (REQUIRE-package 'wgrep)
 ;; (require-package 'project-local-variables)
 ;; (require-package 'diminish)
 ;; (require-package 'scratch)
@@ -30,28 +30,28 @@
 
 ;; (require 'init-frame-hooks)
 ;; (require 'init-xterm)
-(require 'init-themes)
+;;;;;;;;;;(require 'init-themes)
 ;; (require 'init-osx-keys)
 ;; (require 'init-gui-frames)
 ;; (require 'init-proxies)
-(require 'init-dired)
+;; (require 'init-dired)
 ;; (require 'init-isearch)
 ;; (require 'init-uniquify)
 ;; (require 'init-ibuffer)
 ;; (require 'init-flycheck)
 
-(require 'init-recentf)
+;;;;;;;;;;(require 'init-recentf)
 (require 'init-ido)
 (require 'init-yasnippet)
-(require 'init-hippie-expand)
+;;;;;;;;;;(require 'init-hippie-expand)
 (require 'init-auto-complete)
 ;; (require 'init-windows)
 ;; (require 'init-sessions)
-(require 'init-fonts)
+;;;;;;;;;;;(require 'init-fonts)
 ;; (require 'init-mmm)
 (require 'init-tabbar)
-(require 'init-editing-utils)
-(require 'init-matlab)
+;;;;;;;;;;;;;(require 'init-editing-utils)
+;;;;;;;;;;;;(require 'init-matlab)
 
 ;; (require 'init-vc)
 ;; (require 'init-darcs)
@@ -59,8 +59,8 @@
 
 ;; (require 'init-crontab)
 ;; (require 'init-textile)
-(require 'init-markdown)
-(require 'init-auctex)
+;;;;;;;;;;;(require 'init-markdown)
+;;;;;;;;;;(require 'init-auctex)
 ;; (require 'init-csv)
 ;; (require 'init-erlang)
 ;; (require 'init-javascript)
@@ -71,7 +71,7 @@
 ;; (require 'init-css)
 ;; (require 'init-haml)
 ;; (require 'init-python-mode)
-(require 'init-haskell)
+;;;;;;;;;;(require 'init-haskell)
 ;; (require 'init-ruby-mode)
 ;; (require 'init-rails)
 ;; (require 'init-sql)
@@ -137,24 +137,52 @@
 ;;                       (sanityinc/time-subtract-millis after-init-time before-init-time))))
 
 
+;; evil 设置
+(require 'init-evil)
+(require 'init-evil-leader)
+
+;; 代码折叠
+(load-library "hideshow")
+(add-hook 'c-mode-hook 'hs-minor-mode)
+(add-hook 'c++-mode-hook 'hs-minor-mode)
+;; (global-set-key (kbd "C--") 'hs-hide-block)
+;; (global-set-key (kbd "C-=") 'hs-show-block)
+(global-set-key (kbd "C-M--") 'hs-hide-all)
+(global-set-key (kbd "C-M-=") 'hs-show-all)
+;; <F12>在头文件和源文件件跳转
+(global-set-key (kbd "<f12>") 'ff-find-other-file)
+
+;; 设置Tab键缩进，设置c语言代码缩进
+(setq c-indent-level 4)
+(setq c-argdecl-indent 4)
+(setq c-continued-statement-offset 4)
+(setq c-brace-offset 4)
+(setq c-basic-offset 4)
+(setq c-lable-offset 0)
+(setq standard-indent 4)
+(setq indent-tabs-mode nil)
+(setq tab-width 4)
+
+;; shift+箭头 在不同窗口中切换
+(windmove-default-keybindings)
+(global-set-key (kbd "C-S-h") 'windmove-left)
+(global-set-key (kbd "C-S-l") 'windmove-right)
+(global-set-key (kbd "C-S-j") 'windmove-down)
+(global-set-key (kbd "C-S-k") 'windmove-up)
+
+;; 显示行号
+(setq line-number-mode t)
+;; 显示文本行号
+(require 'linum)
+(global-linum-mode t)
+
+;; 显示匹配的括号对
+(show-paren-mode t)
+
+;; 关闭emacs启动时的画面
+(setq inhibit-startup-message 1)
+(setq guns-inhibit-startup-message 1)
+
+
 (provide 'init)
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(ansi-color-faces-vector [default bold shadow italic underline bold bold-italic bold])
- '(ansi-color-names-vector (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
- '(custom-enabled-themes (quote (sanityinc-solarized-dark)))
- '(custom-safe-themes (quote ("4cf3221feff536e2b3385209e9b9dc4c2e0818a69a1cdb4b522756bcdf4e00a4" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" default)))
- '(fci-rule-color "#073642")
- '(vc-annotate-background nil)
- '(vc-annotate-color-map (quote ((20 . "#dc322f") (40 . "#cb4b16") (60 . "#b58900") (80 . "#859900") (100 . "#2aa198") (120 . "#268bd2") (140 . "#d33682") (160 . "#6c71c4") (180 . "#dc322f") (200 . "#cb4b16") (220 . "#b58900") (240 . "#859900") (260 . "#2aa198") (280 . "#268bd2") (300 . "#d33682") (320 . "#6c71c4") (340 . "#dc322f") (360 . "#cb4b16"))))
- '(vc-annotate-very-old-color nil))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
 (put 'narrow-to-region 'disabled nil)
