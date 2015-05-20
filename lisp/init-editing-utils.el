@@ -5,16 +5,25 @@
 
 ;; some default value
 (setq-default
+ ;; 下面两个变量设置光标闪烁
  blink-cursor-delay 0
  blink-cursor-interval 0.4
+ ;; 设置菜单栏中，显示的最大长度
  buffers-menu-max-size 20
+ ;; 
  case-fold-search t
+ ;; 显示光标行坐标
+ line-number-mode t
+ ;; 显示光标列坐标
  column-number-mode t
+ ;; 关于编译的选项，含义不清楚
  compilation-scroll-output t
  delete-selection-mode t
  grep-scroll-output t
+ ;; 
  indent-tabs-mode nil
  line-spacing 0.2
+ ;; 取消emacs自动备份文件
  make-backup-files nil
  mouse-yank-at-point t
  save-interprogram-paste-before-kill t
@@ -27,7 +36,9 @@
  tooltip-delay 1.5
  truncate-lines nil
  truncate-partial-width-windows nil
- visible-bell t)
+ ;; 闪烁屏幕提示警告
+ visible-bell nil)
+
 (set-scroll-bar-mode nil)
 (tool-bar-mode 0)
 
@@ -57,9 +68,10 @@
 ;; change yes-or-no to y-or-n
 ;; (fset 'yes-or-no-p 'y-or-n-p)
 
-;; display time
+;; 在提示信息栏显示时间和日期
 (display-time-mode t)
 (setq display-time-24hr-format t)
+(setq display-time-day-and-date t)
 
 ;; display line number
 ;; (require 'linum)
