@@ -3,14 +3,16 @@
 ;; dimish minor mode name to save mode line space
 (require-package 'diminish)
 
+;;关闭光标闪烁
+(blink-cursor-mode 0)
 ;; some default value
 (setq-default
- ;; 下面两个变量设置光标闪烁
+ ;; 下面两个变量设置光标闪烁，需要打开光标闪烁模式才有效
  blink-cursor-delay 0
  blink-cursor-interval 0.4
  ;; 设置菜单栏中，显示的最大长度
  buffers-menu-max-size 20
- ;; 
+ ;;
  case-fold-search t
  ;; 显示光标行坐标
  line-number-mode t
@@ -20,7 +22,7 @@
  compilation-scroll-output t
  delete-selection-mode t
  grep-scroll-output t
- ;; 
+ ;;
  indent-tabs-mode nil
  line-spacing 0.2
  ;; 取消emacs自动备份文件
