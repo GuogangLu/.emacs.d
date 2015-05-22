@@ -38,7 +38,6 @@
 (setq ac-auto-start t)
 (setq ac-quick-help-delay 0.5)
 ;; (ac-set-trigger-key "TAB")
-;; (define-key ac-mode-map  [(control tab)] 'auto-complete)
 (define-key ac-mode-map  [(control tab)] 'auto-complete)
 (setq ac-clang-flags
       (mapcar (lambda (item)(concat "-I" item))

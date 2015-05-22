@@ -1,0 +1,23 @@
+
+;; ----- smex-history -----
+(
+ dired
+ compile
+ w3m
+ customize-option
+ make-directory
+ eshell
+ cd
+)
+
+;; ----- smex-data -----
+(
+ (w3m . 4)
+ (w3m-update-toolbar . 1)
+ (c-indent-exp . 1)
+ (make-directory . 3)
+ (compile . 35)
+ (eshell . 4)
+ (customize-option . 2)
+ (dired . 1)
+)

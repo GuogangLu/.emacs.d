@@ -1,6 +1,7 @@
 *.o
 *.dat
 *~
+*.last
 elpa/
 auto-save-list/
 eshell/
