@@ -1,12 +1,15 @@
 *.o
 *.dat
 *~
-*.last
 elpa/
 auto-save-list/
 eshell/
+url/
 
 # ignore auto-generated file
+recentf
+smex-items
+*.last
 srecode-map.el
 .mc-lists.el
 session.*
