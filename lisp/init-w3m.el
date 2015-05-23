@@ -56,6 +56,8 @@
 (define-key w3m-mode-map  ";n" 'w3m-goto-new-session-url)
 ;查看书签
 (define-key w3m-mode-map  ";b" 'w3m-bookmark-view)
+;行跳转
+(define-key w3m-mode-map  ";g" 'goto-line)
 
 ;; 使用evil模式的快捷键选中和复制
 (define-key w3m-mode-map  "v" 'evil-visual-char)
