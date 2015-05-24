@@ -65,7 +65,7 @@
 (require 'init-w3m)
 
 ;; 设置词典
-;; (require 'init-sdcv)
+(require 'init-sdcv)
 
 ;; 设置cc-mode运行的一些添加配置
 (require 'init-mycc-mode)
