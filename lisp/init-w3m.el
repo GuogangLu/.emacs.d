@@ -14,6 +14,8 @@
 
 ;; 使用cookies
 (setq w3m-use-cookies t)
+;; (setq w3m-cookies-file 'w3m/cookies)
+;; (setq w3m-bookmark-file 'w3m/bookmark)
 
 ;;设定w3m运行的参数，分别为使用cookie和使用框架
 (setq w3m-command-arguments '("-cookie" "-F"))
