@@ -44,6 +44,10 @@
 (set-scroll-bar-mode nil)
 (tool-bar-mode 0)
 
+;;关于缩进调整
+(setq standard-indent 4
+      indent-tabs-mode nil
+      tab-width 4)
 
 ;; auto-revert
 (global-auto-revert-mode)

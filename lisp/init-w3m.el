@@ -29,8 +29,9 @@
 (setq w3m-show-graphic-icons-in-mode-line t)
 
 ;;C-c C-p 打开，这个好用
-;; (setq w3m-view-this-url-new-session-in-background t)
+(setq w3m-view-this-url-new-session-in-background t)
 
+;; 去掉w3m输出的一些无用的东西
 (add-hook 'w3m-fontify-after-hook 'remove-w3m-output-garbages)
 
 (defun remove-w3m-output-garbages ()
