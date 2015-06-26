@@ -4,8 +4,8 @@
 (add-hook 'c++-mode-hook 'hs-minor-mode)
 
 ;; 调用google-c-style风格
-(require 'google-c-style)
-(add-hook 'c-mode-hook 'google-c-style)
+;; (require 'google-c-style)
+;; (add-hook 'c-mode-hook 'google-c-style)
 
 ;; 设置Tab键缩进，设置c语言代码缩进
 (defun my-c-mode-hook ()

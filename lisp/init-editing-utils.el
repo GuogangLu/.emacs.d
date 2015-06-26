@@ -152,4 +152,7 @@
 ;; set some compilation shortcuts
 (require 'init-compile)
 
+;; 设置中英文混合的地方
+;; (require-package 'chinese-fonts-setup)
+
 (provide 'init-editing-utils)

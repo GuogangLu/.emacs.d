@@ -48,6 +48,7 @@
 ;; (require 'init-haml)
 ;; (require 'init-python-mode)
 ;; (require 'init-haskell)
+(require 'init-js2)
 
 ;; (when *spell-check-support-enabled*
 ;;   (require 'init-spelling))
@@ -76,3 +77,4 @@
 
 (provide 'init)
 (put 'narrow-to-region 'disabled nil)
+(put 'dired-find-alternate-file 'disabled nil)
