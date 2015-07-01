@@ -2,12 +2,12 @@
 ;; ----- smex-history -----
 (
  org-publish-project
+ org-version
+ describe-face
  eval-defun
  customize-option
  package-list-packages
  yas-global-mode
- dired
- compile
 )
 
 ;; ----- smex-data -----
@@ -27,7 +27,9 @@
  (yas-global-mode . 1)
  (op/do-publication . 7)
  (op/new-repository . 1)
- (org-publish-project . 86)
+ (org-publish-project . 107)
  (eval-defun . 12)
  (org-publish-current-file . 1)
+ (describe-face . 1)
+ (org-version . 1)
 )

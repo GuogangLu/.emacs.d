@@ -90,24 +90,20 @@
 (setq org-publish-project-alist
       '(("idev-docs"
          :base-directory "~/design/idev/doc"
+         :base-extension "org"
          :publishing-directory "~/idevhtml"
-         :recursive t
          :publishing-function org-html-publish-to-html
-         :headline-levels 4
-         :auto-preamble t
-         :sitemap-filename "index.org"
-         :style "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/worg.css\" />"
-         :style-include-default nil)
-        ("ihomed-docs"
-         :base-directory "~/design/ihomed/doc"
-         :publishing-directory "~/ihomedhtml"
-         :recursive t
-         :publishing-function org-html-publish-to-html
-         :headline-levels 4
-         :auto-preamble t
-         :sitemap-filename "index.org"
-         :style "<link rel='stylesheet' type='text/css' href='css/org.css' />"
-         :style-include-default nil)
-        ("xp" :components("idev-docs" "ihomed-docs"))))
+         :exclude "*.org"
+         :headline-levels 3
+         :section-numbers nil
+         :with-toc t
+         :html-head "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/org1.css\"/>"
+         :html-preamble t)
+        ("style"
+         :base-directory "~/.emacs.d/lisp/custom-themes/css"
+         :base-extension "css\\|el"
+         :publishing-directory "~/idevhtml/css"
+         :publishing-function org-publish-attachment)
+        ("idev" :components("idev-docs" "style"))))
 
 (provide 'init-org)
