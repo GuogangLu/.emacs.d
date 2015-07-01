@@ -1,0 +1,14 @@
+#name : file header
+# key: \ifile
+# --
+/**
+**@file 	${1:filename}
+**@brief	${2:describe}
+**
+**@version	V0.1
+**@author	luguogang
+**@date	${2:$(current-time-string)}
+**
+**@attention
+**这里添加许可证
+*/

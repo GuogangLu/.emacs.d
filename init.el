@@ -24,7 +24,7 @@
 
 ;; (require-package 'diminish)
 ;; (require 'init-themes)
-;; (require 'init-dired)
+(require 'init-dired)
 
 (require 'init-recentf)
 (require 'init-ido)
@@ -63,7 +63,9 @@
 (require 'init-evil-leader)
 
 ;; 设置浏览器
-(require 'init-w3m)
+;; 仅在linux系统中使用，windows等其他系统不使用。
+(if (eq system-type 'gnu/linux)
+    (require 'init-w3m))
 
 ;; 设置词典
 (require 'init-sdcv)

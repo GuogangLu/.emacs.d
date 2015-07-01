@@ -1,26 +1,28 @@
 
 ;; ----- smex-history -----
 (
- w3m
+ yas-global-mode
  dired
- shell
+ w3m
  package-list-packages
+ shell
  compile
  customize-option
- eshell
 )
 
 ;; ----- smex-data -----
 (
- (w3m . 15)
+ (w3m . 16)
  (w3m-update-toolbar . 1)
  (c-indent-exp . 1)
  (make-directory . 3)
  (compile . 35)
  (eshell . 4)
  (customize-option . 2)
- (dired . 2)
- (package-list-packages . 1)
+ (dired . 3)
+ (package-list-packages . 2)
  (shell . 1)
  (org-indent-mode . 2)
+ (yas/new-snippet . 1)
+ (yas-global-mode . 1)
 )

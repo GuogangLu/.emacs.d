@@ -1,0 +1,17 @@
+#name : function header
+# key: \if
+# --
+/**
+**@brief	${1:function name}
+**		${2:describe}
+**@param[in] 	${3:attr} 	${4:describe}
+**
+**@retval	0 	成功
+**@retval	<0 	错误码
+**
+**@version	V0.1
+**
+**@author	Guogang Lu (lgg), lugang0512@gmail.com,chongqingxiepu
+**@date	${2:$(current-time-string)}
+**
+*/

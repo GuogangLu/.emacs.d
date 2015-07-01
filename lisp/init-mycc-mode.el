@@ -1,7 +1,10 @@
 ;; 代码折叠
 (load-library "hideshow")
 (add-hook 'c-mode-hook 'hs-minor-mode)
-(add-hook 'c++-mode-hook 'hs-minor-mode)
+(add-hook 'cc-mode-hook 'hs-minor-mode)
+;; 开启yas
+(add-hook 'c-mode-hook 'yas-minor-mode)
+(add-hook 'cc-mode-hook 'yas-minor-mode)
 
 ;; 调用google-c-style风格
 ;; (require 'google-c-style)
