@@ -36,6 +36,7 @@
  set-mark-command-repeat-pop t
  show-trailing-whitespace t
  tooltip-delay 1.5
+ ;; 自动换行
  truncate-lines nil
  truncate-partial-width-windows nil
  ;; 闪烁屏幕提示警告

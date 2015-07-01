@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ org-publish-project
+ eval-defun
+ customize-option
+ package-list-packages
  yas-global-mode
  dired
- w3m
- package-list-packages
- shell
  compile
- customize-option
 )
 
 ;; ----- smex-data -----
@@ -18,11 +18,16 @@
  (make-directory . 3)
  (compile . 35)
  (eshell . 4)
- (customize-option . 2)
+ (customize-option . 4)
  (dired . 3)
- (package-list-packages . 2)
+ (package-list-packages . 3)
  (shell . 1)
  (org-indent-mode . 2)
  (yas/new-snippet . 1)
  (yas-global-mode . 1)
+ (op/do-publication . 7)
+ (op/new-repository . 1)
+ (org-publish-project . 86)
+ (eval-defun . 12)
+ (org-publish-current-file . 1)
 )

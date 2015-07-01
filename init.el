@@ -78,5 +78,3 @@
 (setq guns-inhibit-startup-message 1)
 
 (provide 'init)
-(put 'narrow-to-region 'disabled nil)
-(put 'dired-find-alternate-file 'disabled nil)

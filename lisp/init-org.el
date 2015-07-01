@@ -82,7 +82,32 @@
 (add-hook 'org-mode-hook 'toc-org-enable)
 
 ;; enable markdown-exporting to the export menu
-(eval-after-load "org"
-  '(require 'ox-md nil t))
+(eval-after-load "org" '(require 'ox-md nil t))
+
+;; 配置org发布系统
+;; 注意网上很多资料publishing-function org-publish-org-to-html
+;; 现在的版本更为 org-html-publish-to-html
+(setq org-publish-project-alist
+      '(("idev-docs"
+         :base-directory "~/design/idev/doc"
+         :publishing-directory "~/idevhtml"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4
+         :auto-preamble t
+         :sitemap-filename "index.org"
+         :style "<link rel=\"stylesheet\" type=\"text/css\" href=\"css/worg.css\" />"
+         :style-include-default nil)
+        ("ihomed-docs"
+         :base-directory "~/design/ihomed/doc"
+         :publishing-directory "~/ihomedhtml"
+         :recursive t
+         :publishing-function org-html-publish-to-html
+         :headline-levels 4
+         :auto-preamble t
+         :sitemap-filename "index.org"
+         :style "<link rel='stylesheet' type='text/css' href='css/org.css' />"
+         :style-include-default nil)
+        ("xp" :components("idev-docs" "ihomed-docs"))))
 
 (provide 'init-org)
