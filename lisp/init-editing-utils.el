@@ -3,6 +3,13 @@
 ;; dimish minor mode name to save mode line space
 (require-package 'diminish)
 
+;; 设置默认编码
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(set-clipboard-coding-system 'utf-8)
+
 ;;关闭光标闪烁
 (blink-cursor-mode 0)
 ;; some default value
