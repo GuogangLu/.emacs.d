@@ -2,9 +2,7 @@
 ; (require-package 'org-magit)
 (require-package 'toc-org)
 
-
 (define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
 
 ;; Various preferences
 (setq org-log-done t
@@ -139,6 +137,7 @@
         ("h" "Prj-ihomed" entry (file+headline "~/GTD/project.org" "Ihomed") "* TODO %?\n %i\n %T\n%a")
         ("p" "Project" entry (file "~/GTD/project.org") "* TODO %?\n %i\n %T\n%a")))
 (global-set-key "\C-cc" 'org-capture)
+(global-set-key "\C-ca" 'org-agenda)
 ;; 设置org-agenda  Trash.org保存被丢弃的任务
 (setq org-agenda-files
       (quote ( "~/GTD/inbox.org"
@@ -147,8 +146,10 @@
                "~/GTD/project.org"
                "~/GTD/trash.org")))
 ;; 配置mobileorg
+(setq org-directory "/lgg@120.24.73.165:/home/lgg/")
 (setq  org-mobile-directory "/lgg@120.24.73.165:/home/lgg/org")
-(setq org-mobile-inbox-for-pull (concat org-directory "/index.org"))
+(setq org-mobile-index-file "index.org")
+(setq org-mobile-inbox-for-pull (concat org-directory "org/fromMobile.org"))
 (setq org-mobile-files (quote ("~/GTD/inbox.org"
                               "~/GTD/task.org"
                               "~/GTD/project.org"

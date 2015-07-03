@@ -38,6 +38,6 @@
  (remember . 1)
  (remember-other-frame . 1)
  (org-agenda . 1)
- (org-mobile-push . 7)
- (org-mobile-pull . 8)
+ (org-mobile-push . 22)
+ (org-mobile-pull . 13)
 )
