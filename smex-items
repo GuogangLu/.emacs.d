@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ org-mobile-pull
+ org-mobile-push
  package-list-packages
  org-agenda
  remember-other-frame
  remember
  set-buffer-file-coding-system
- set-buffer-process-coding-system
- describe-coding-system
 )
 
 ;; ----- smex-data -----
@@ -38,4 +38,6 @@
  (remember . 1)
  (remember-other-frame . 1)
  (org-agenda . 1)
+ (org-mobile-push . 7)
+ (org-mobile-pull . 8)
 )

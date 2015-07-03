@@ -135,19 +135,25 @@
         ("c" "Calendar" entry (file+headline "~/GTD/task.org" "Calendar") "* TODO %?\n %i\n %T\n%a")
         ("d" "Idea" entry (file+headline "~/GTD/task.org" "Idea") "* TODO %?\n %i\n %T\n%a")
         ("f" "Finished" entry (file "~/GTD/finished.org") "* TODO %?\n %i\n %T\n%a")
+        ("i" "Prj-idev" entry (file+headline "~/GTD/project.org" "Idev") "* TODO %?\n %i\n %T\n%a")
+        ("h" "Prj-ihomed" entry (file+headline "~/GTD/project.org" "Ihomed") "* TODO %?\n %i\n %T\n%a")
         ("p" "Project" entry (file "~/GTD/project.org") "* TODO %?\n %i\n %T\n%a")))
 (global-set-key "\C-cc" 'org-capture)
 ;; 设置org-agenda  Trash.org保存被丢弃的任务
 (setq org-agenda-files
-      (list "~/GTD/inbox.org"
-            "~/GTD/task.org"
-            "~/GTD/finished.org"
-            "~/GTD/project.org"
-            "~/GTD/trash.org"))
+      (quote ( "~/GTD/inbox.org"
+               "~/GTD/task.org"
+               "~/GTD/finished.org"
+               "~/GTD/project.org"
+               "~/GTD/trash.org")))
 ;; 配置mobileorg
-(setq  org-mobile-directory "~/GTD"
-       org-directory "~/GTD")
-(setq org-mobile-files (quote "~/GTD/inbox.org"))
+(setq  org-mobile-directory "/lgg@120.24.73.165:/home/lgg/org")
+(setq org-mobile-inbox-for-pull (concat org-directory "/index.org"))
+(setq org-mobile-files (quote ("~/GTD/inbox.org"
+                              "~/GTD/task.org"
+                              "~/GTD/project.org"
+                              "~/GTD/finished.org"
+                              "~/GTD/trash.org")))
 ;---------------------- GTD配置结束 --------------------------------------------
 
 (provide 'init-org)
