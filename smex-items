@@ -1,13 +1,13 @@
 
 ;; ----- smex-history -----
 (
+ package-list-packages
+ org-agenda
  remember-other-frame
  remember
- package-list-packages
  set-buffer-file-coding-system
  set-buffer-process-coding-system
  describe-coding-system
- org-version
 )
 
 ;; ----- smex-data -----
@@ -20,7 +20,7 @@
  (eshell . 4)
  (customize-option . 4)
  (dired . 3)
- (package-list-packages . 7)
+ (package-list-packages . 8)
  (shell . 1)
  (org-indent-mode . 2)
  (yas/new-snippet . 1)
@@ -37,4 +37,5 @@
  (set-buffer-process-coding-system . 1)
  (remember . 1)
  (remember-other-frame . 1)
+ (org-agenda . 1)
 )

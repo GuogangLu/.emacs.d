@@ -106,7 +106,48 @@
          :publishing-function org-publish-attachment)
         ("idev" :components("idev-docs" "style"))))
 
+;---------------------- GTD配置开始 --------------------------------------------
+;; 配置org-capture<原org-remember> orgmode8以后使用org-capture
+(require 'org-capture)
+;TODO     最基本的任务状态，现在想做，但还没有计划做的时间
+;NEXT     下一步行动，还没有开始计划
+;SOMEDAY  想法，还没有决定是否开始行动
+;WAITTING 等待其他人完成
+;DONE     已经完成，需要记录完成实际和备注说明，转移到Finished.org的相应节点
+;ABORT    取消的任务，需要说明取消的理由，转移到Trash.org的相应节点
+(setq org-todo-keywords
+      '((sequence "TODO(t!)"
+                  "NEXT(n)"
+                  "SOMEDAY(s)"
+                  "WAITTING(w)"
+                  "|"
+                  "DONE(d@/!)"
+                  "ABORT(a@/!)")))
+;New      收集未整理的信息
+;Task     待办事项，所有未完成的事项
+;Calendar 日程安排，具有明确时间的待办事项，可以是周期性任务
+;Idea     想法、愿望
+;Finished 所有完成的事项
+;Project  项目任务
+(setq org-capture-templates
+      '(("n" "New" entry (file "~/GTD/inbox.org") "* TODO %?\n %i\n %T\n%a")
+        ("t" "Task" entry (file+headline "~/GTD/task.org" "Task") "* TODO %?\n %i\n %T\n%a")
+        ("c" "Calendar" entry (file+headline "~/GTD/task.org" "Calendar") "* TODO %?\n %i\n %T\n%a")
+        ("d" "Idea" entry (file+headline "~/GTD/task.org" "Idea") "* TODO %?\n %i\n %T\n%a")
+        ("f" "Finished" entry (file "~/GTD/finished.org") "* TODO %?\n %i\n %T\n%a")
+        ("p" "Project" entry (file "~/GTD/project.org") "* TODO %?\n %i\n %T\n%a")))
+(global-set-key "\C-cc" 'org-capture)
+;; 设置org-agenda  Trash.org保存被丢弃的任务
+(setq org-agenda-files
+      (list "~/GTD/inbox.org"
+            "~/GTD/task.org"
+            "~/GTD/finished.org"
+            "~/GTD/project.org"
+            "~/GTD/trash.org"))
 ;; 配置mobileorg
-(setq org-mobile-directory "~/GTD")
+(setq  org-mobile-directory "~/GTD"
+       org-directory "~/GTD")
+(setq org-mobile-files (quote "~/GTD/inbox.org"))
+;---------------------- GTD配置结束 --------------------------------------------
 
 (provide 'init-org)
