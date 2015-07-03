@@ -4,6 +4,8 @@
 (evil-leader/set-key
 ;; 将org-cycle绑定在;;上
    ";" 'org-cycle
+;; 打开remember绑定在;j上
+   "j" 'remember-other-frame
 ;; 文件查找绑定在;f上
    "f" 'find-file
 ;; 添加b为查看buffer快捷键
@@ -22,6 +24,8 @@
    "m" 'menu-bar-open
 ;; 添加.为切换最近使用的buffer叠快捷键
    "." 'evil-buffer
+;; 添加q为退出快捷键
+   "q" 'evil-quit
 ;; 添加w为保存文件快捷键
    "w" 'save-buffer)
 

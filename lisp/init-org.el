@@ -1,5 +1,5 @@
 (require-package 'org-fstree)
-(require-package 'org-magit)
+; (require-package 'org-magit)
 (require-package 'toc-org)
 
 
@@ -105,5 +105,8 @@
          :publishing-directory "~/idevhtml/css"
          :publishing-function org-publish-attachment)
         ("idev" :components("idev-docs" "style"))))
+
+;; 配置mobileorg
+(setq org-mobile-directory "~/GTD")
 
 (provide 'init-org)
