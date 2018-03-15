@@ -1,1 +1,32 @@
-Sync : Upload Complete. GIST ID :  ae5aa2a9b4fdc8b0b1b319dfd816f71e . Please copy and use this ID in other machines to download settings.
+CODE SETTINGS SYNC UPLOAD SUMMARY
+Version: 2.9.0
+--------------------
+GitHub Token: fc8fb216374ec991f8cc7cae7fbb733a7384e898
+GitHub Gist: a9c169ffe3b2a3e02d679720cc202289
+GitHub Gist Type: Secret
+
+Restarting Visual Studio Code may be required to apply color and file icon theme.
+--------------------
+Files Uploaded:
+
+  Extensions Removed:
+
+Extensions Added:
+  beautify v1.3.0
+  cmake v0.0.17
+  cmake-tools v0.10.4
+  code-settings-sync v2.9.0
+  codeacejumper v1.1.5
+  eggjs v0.3.0
+  eggjs-dev-tools v0.4.0
+  githistory v0.4.0
+  markdown-preview-enhanced v0.3.3
+  npm-intellisense v1.3.0
+  QML v1.0.0
+  Theme-EggplantParm v0.0.2
+  vetur v0.11.7
+  vim v0.11.2
+  vscode-eslint v1.4.7
+  vscode-jumpy v0.3.1
+--------------------
+Done.
